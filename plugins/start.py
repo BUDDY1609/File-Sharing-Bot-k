@@ -55,7 +55,7 @@ async def start_command(client: Client, message: Message):
                 ids = [int(int(argument[1]) / abs(client.db_channel.id))]
             except:
                 return
-        temp_msg = await message.reply("Please wait...")
+        temp_msg = await message.reply("Search Your File, Please wait...")
         try:
             messages = await get_messages(client, ids)
         except:
@@ -88,8 +88,13 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("😊 About Me", callback_data = "about"),
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
+                        InlineKeyboardButton('❤ Donation ', url='https://upier.vercel.app/pay/tgnvs@axisbank')
+                    ],[
+                        InlineKeyboardButton('〽️ 𝙐𝙥𝙙𝙖𝙩𝙚𝙨', url='https://t.me/tgnvs'),
+                        InlineKeyboardButton('🎬 𝙈𝙤𝙫𝙞𝙚 𝘾𝙝𝙖𝙣𝙣𝙚𝙡', url='https://t.me/nvsmovielink')
+                    ],[
+                        InlineKeyboardButton("😊 About Me", callback_data = "about"),
+                        InlineKeyboardButton("🔒 Close", callback_data = "close")
                 ]
             ]
         )
